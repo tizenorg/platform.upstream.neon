@@ -1,7 +1,50 @@
 ------------------------------------------------------------------------
-r1762 | joe | 2009-12-15 20:52:00 +0000 (Tue, 15 Dec 2009) | 1 line
+r1776 | joe | 2009-12-30 21:34:07 +0000 (Wed, 30 Dec 2009) | 1 line
 
-Tag release 0.29.1.
+Tag release 0.29.2.
+------------------------------------------------------------------------
+r1775 | joe | 2009-12-30 21:31:55 +0000 (Wed, 30 Dec 2009) | 2 lines
+
+* po/: make update-po.
+
+------------------------------------------------------------------------
+r1774 | joe | 2009-12-30 21:31:30 +0000 (Wed, 30 Dec 2009) | 2 lines
+
+* macros/neon.m4: Bump version.
+
+------------------------------------------------------------------------
+r1773 | joe | 2009-12-30 21:30:55 +0000 (Wed, 30 Dec 2009) | 2 lines
+
+* NEWS: 0.29.2 news.
+
+------------------------------------------------------------------------
+r1772 | joe | 2009-12-30 21:29:30 +0000 (Wed, 30 Dec 2009) | 10 lines
+
+Merge r1748 from trunk:
+
+Clear sspi_token buffer after each request.
+
+* src/ne_auth.c (request_sspi): Return NULL if sspi_token is not present.
+
+* src/ne_auth.c (ah_post_send): Clear the buffered sspi_token.
+
+Submitted by: Danil Shopyrin <danil visualsvn.com>
+
+------------------------------------------------------------------------
+r1771 | joe | 2009-12-30 21:28:48 +0000 (Wed, 30 Dec 2009) | 7 lines
+
+Merge r1770 from trunk:
+
+* src/ne_openssl.c (verify_callback): Handle OpenSSL error code
+  X509_V_ERR_UNABLE_TO_GET_ISSUER_CERT as an untrusted cert.
+
+Submitted by: Tom C <tomc.neon pnl.gov>
+
+------------------------------------------------------------------------
+r1767 | joe | 2009-12-15 22:24:26 +0000 (Tue, 15 Dec 2009) | 2 lines
+
+* po/: make update-po.
+
 ------------------------------------------------------------------------
 r1753 | joe | 2009-12-14 20:45:16 +0000 (Mon, 14 Dec 2009) | 2 lines
 
