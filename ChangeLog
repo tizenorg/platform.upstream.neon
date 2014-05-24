@@ -1,7 +1,55 @@
 ------------------------------------------------------------------------
-r1737 | joe | 2009-09-13 13:16:02 +0100 (Sun, 13 Sep 2009) | 1 line
+r1762 | joe | 2009-12-15 20:52:00 +0000 (Tue, 15 Dec 2009) | 1 line
 
-Tag release 0.29.0.
+Tag release 0.29.1.
+------------------------------------------------------------------------
+r1753 | joe | 2009-12-14 20:45:16 +0000 (Mon, 14 Dec 2009) | 2 lines
+
+* macros/neon.m4, NEWS: Prepare for 0.29.1.
+
+------------------------------------------------------------------------
+r1751 | joe | 2009-12-02 21:40:41 +0000 (Wed, 02 Dec 2009) | 4 lines
+
+Merge r1750 from trunk:
+
+* src/ne_gnutls.c (map_verify_failures): Fix build for GnuTLS < 2.8.
+
+------------------------------------------------------------------------
+r1749 | joe | 2009-12-02 21:27:34 +0000 (Wed, 02 Dec 2009) | 13 lines
+
+Merge r1739, r1744, r1746, r1747 from trunk:
+
+* config.hw.in: Fix socklen_t with recent SDKs, thanks to Stefan Kung.
+
+* src/ne_socket.c: Fixed 'missing symbol' win2k runtime problem.
+
+* src/ne_ntlm.c (ne__ntlm_authenticate)
+* src/ne_auth.c (ntlm_challenge):
+  In case of session timeout, do not call auth callback; use
+  existing credentials.
+
+* src/ne_ntlm.c (mkhash): Fix buffer overflow (basic@mozdev.org).
+
+------------------------------------------------------------------------
+r1743 | joe | 2009-10-25 11:25:24 +0000 (Sun, 25 Oct 2009) | 5 lines
+
+Merge r1742 from trunk:
+
+* src/ne_session.c (ne_session_create): Only enable SNI by default if
+  the server hostname does not parse as a numeric IP address.
+
+------------------------------------------------------------------------
+r1740 | joe | 2009-09-26 20:58:08 +0100 (Sat, 26 Sep 2009) | 9 lines
+
+Merge r1738, r1739 from trunk:
+
+* src/ne_socket.c (ne_iaddr_parse): Fix Win32 build for both
+  USE_GETADDRINFO and !USE_GETADDRINFO cases.
+
+* config.hw.in: Fix socklen_t with recent SDKs, thanks to Stefan Kung.
+
+Reviewed by: jorton
+
 ------------------------------------------------------------------------
 r1735 | joe | 2009-09-13 13:12:27 +0100 (Sun, 13 Sep 2009) | 2 lines
 
