@@ -1,7 +1,33 @@
 ------------------------------------------------------------------------
-r1776 | joe | 2009-12-30 21:34:07 +0000 (Wed, 30 Dec 2009) | 1 line
+r1785 | joe | 2010-01-11 20:26:37 +0000 (Mon, 11 Jan 2010) | 1 line
 
-Tag release 0.29.2.
+Tag release 0.29.3.
+------------------------------------------------------------------------
+r1784 | joe | 2010-01-11 20:21:21 +0000 (Mon, 11 Jan 2010) | 2 lines
+
+* macros/neon.m4: Bump to 0.29.3.
+
+------------------------------------------------------------------------
+r1783 | joe | 2010-01-11 20:21:06 +0000 (Mon, 11 Jan 2010) | 2 lines
+
+* NEWS: Tweaks.
+
+------------------------------------------------------------------------
+r1782 | joe | 2010-01-11 10:40:42 +0000 (Mon, 11 Jan 2010) | 2 lines
+
+* NEWS: Document ne_sock_close() changes.
+
+------------------------------------------------------------------------
+r1781 | joe | 2010-01-11 10:36:14 +0000 (Mon, 11 Jan 2010) | 8 lines
+
+Merge r1780 from trunk:
+
+* src/ne_socket.c (ne_sock_close): Do not wait for the peer's
+  close_notify alert with either GnuTLS or OpenSSL.
+  [HAVE_GNUTLS]: Fix memory leak: free the session object.
+
+* src/ne_socket.h (ne_sock_close): Clarify close_notify handling.
+
 ------------------------------------------------------------------------
 r1775 | joe | 2009-12-30 21:31:55 +0000 (Wed, 30 Dec 2009) | 2 lines
 
