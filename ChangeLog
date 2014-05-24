@@ -1,7 +1,53 @@
 ------------------------------------------------------------------------
-r1817 | joe | 2010-10-01 13:01:18 +0100 (Fri, 01 Oct 2010) | 1 line
+r1826 | joe | 2010-10-14 16:06:52 +0100 (Thu, 14 Oct 2010) | 1 line
 
-Tag release 0.29.4.
+Tag release 0.29.5.
+------------------------------------------------------------------------
+r1825 | joe | 2010-10-14 16:04:44 +0100 (Thu, 14 Oct 2010) | 2 lines
+
+* NEWS: Tweak.
+
+------------------------------------------------------------------------
+r1824 | joe | 2010-10-14 16:03:02 +0100 (Thu, 14 Oct 2010) | 2 lines
+
+* NEWS: Update with GnuTLS fix.
+
+------------------------------------------------------------------------
+r1823 | joe | 2010-10-14 16:02:41 +0100 (Thu, 14 Oct 2010) | 10 lines
+
+Merge r1818 from trunk:
+
+* test/socket.c (addr_reverse) [HAVE_GETHOSTNAME]: Accept system
+  hostname as reverse of 127.0.0.1.
+
+* macros/neon-test.m4 (NEON_TEST): Check for gethostname().
+
+Submitted by: joe
+Reviewed by: jorton
+
+------------------------------------------------------------------------
+r1822 | joe | 2010-10-14 16:01:53 +0100 (Thu, 14 Oct 2010) | 2 lines
+
+* NEWS, macros/neon.m4: Prepare for 0.29.5.
+
+------------------------------------------------------------------------
+r1821 | joe | 2010-10-14 16:00:53 +0100 (Thu, 14 Oct 2010) | 6 lines
+
+Merge r1797 from trunk:
+
+* src/ne_auth.c: Add handling of 2xx responses in SSPI code.
+(Danil Shopyrin <danil visualsvn.com>)
+
+
+------------------------------------------------------------------------
+r1820 | joe | 2010-10-09 17:07:17 +0100 (Sat, 09 Oct 2010) | 6 lines
+
+Merge r1819 from trunk:
+
+* src/ne_socket.c (ne_sock_connect_ssl): Ignore TLS warnings
+  during handshake (Bryan Cain).
+
+
 ------------------------------------------------------------------------
 r1816 | joe | 2010-10-01 13:00:02 +0100 (Fri, 01 Oct 2010) | 2 lines
 
