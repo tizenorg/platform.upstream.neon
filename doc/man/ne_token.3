@@ -1,13 +1,22 @@
 '\" t
 .\"     Title: ne_token
 .\"    Author: 
-.\" Generator: DocBook XSL Stylesheets v1.75.2 <http://docbook.sf.net/>
-.\"      Date: 14 October 2010
+.\" Generator: DocBook XSL Stylesheets v1.76.1 <http://docbook.sf.net/>
+.\"      Date:  3 May 2011
 .\"    Manual: neon API reference
-.\"    Source: neon 0.29.5
+.\"    Source: neon 0.29.6
 .\"  Language: English
 .\"
-.TH "NE_TOKEN" "3" "14 October 2010" "neon 0.29.5" "neon API reference"
+.TH "NE_TOKEN" "3" "3 May 2011" "neon 0.29.6" "neon API reference"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
 .\" -----------------------------------------------------------------
 .\" * set default formatting
 .\" -----------------------------------------------------------------
@@ -63,7 +72,7 @@ The following function prints out each token in a comma\-separated string
 static void splitter(char *list)
 {
   do {
-    printf("Token: %s\en", ne_token(&list, \',\'));
+    printf("Token: %s\en", ne_token(&list, \*(Aq,\*(Aq));
   while (list);
 }
 .fi

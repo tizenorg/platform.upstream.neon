@@ -1,7 +1,89 @@
 ------------------------------------------------------------------------
-r1826 | joe | 2010-10-14 16:06:52 +0100 (Thu, 14 Oct 2010) | 1 line
+r1843 | joe | 2011-05-03 13:15:08 +0100 (Tue, 03 May 2011) | 1 line
 
-Tag release 0.29.5.
+Tag release 0.29.6.
+------------------------------------------------------------------------
+r1842 | joe | 2011-05-03 13:14:56 +0100 (Tue, 03 May 2011) | 2 lines
+
+* macros/neon.m4: Bump to .6.
+
+------------------------------------------------------------------------
+r1841 | joe | 2011-05-03 13:09:46 +0100 (Tue, 03 May 2011) | 2 lines
+
+* NEWS: Tweak ordering.
+
+------------------------------------------------------------------------
+r1840 | joe | 2011-05-03 13:09:18 +0100 (Tue, 03 May 2011) | 2 lines
+
+* More news.
+
+------------------------------------------------------------------------
+r1839 | joe | 2011-05-03 13:07:08 +0100 (Tue, 03 May 2011) | 22 lines
+
+Merge r1836, r1837, r1838 from trunk:
+
+* src/ne_gnutls.c (ne__ssl_init): Fix for GnuTLS with Nettle.
+
+* src/ne_auth.c (get_cnonce): Likewise.
+
+Submitted by: Arfrever Frehtes Taifersar Arahesis <arfrever.fta gmail.com>
+
+* src/ne_auth.c
+  (ah_post_send): Clear SSPI context only after successful authentication.
+
+Submitted by: Ivan Zhakov <ivan visualsvn.com>
+
+Fix some errors flagged by a Coverity scan:
+
+* src/ne_auth.c (verify_negotiate_response): Check for NULL pointer.
+
+* src/ne_gnutls.c (check_certificate): Initiatialize 'failures'.
+  (pkcs12_parse): Check for _crt_init failure.
+
+* src/ne_session.c (ne__ssl_set_verify_err): Pass size-1 to strncat.
+
+------------------------------------------------------------------------
+r1835 | joe | 2011-03-01 13:28:28 +0000 (Tue, 01 Mar 2011) | 2 lines
+
+* NEWS: Update.
+
+------------------------------------------------------------------------
+r1834 | joe | 2011-03-01 13:26:04 +0000 (Tue, 01 Mar 2011) | 6 lines
+
+Merge r1833 from trunk:
+
+* src/ne_request.c (ne_request_create): Pass copied method to
+  pre_send hooks to avoid lifetime issues (Patrick Ohly).
+
+
+------------------------------------------------------------------------
+r1832 | joe | 2010-11-11 12:32:11 +0000 (Thu, 11 Nov 2010) | 2 lines
+
+* macros/neon.m4: Really bump to -dev.
+
+------------------------------------------------------------------------
+r1831 | joe | 2010-11-11 12:31:39 +0000 (Thu, 11 Nov 2010) | 2 lines
+
+* macros/neon.m4, NEWS: Bump to .6-dev.
+
+------------------------------------------------------------------------
+r1830 | joe | 2010-11-11 12:29:51 +0000 (Thu, 11 Nov 2010) | 5 lines
+
+Merge r1827 from trunk:
+
+* doc/ref/iaddr.xml: Update ne_iaddr_* docs.
+
+
+------------------------------------------------------------------------
+r1829 | joe | 2010-11-11 12:26:45 +0000 (Thu, 11 Nov 2010) | 7 lines
+
+Merge r1828 from trunk:
+
+* src/ne_gnutls.c (provide_client_cert): Return success with no cert
+  if no cert is available; match behaviour with OpenSSL.  Thanks to
+  Patrick Ohly.
+
+
 ------------------------------------------------------------------------
 r1825 | joe | 2010-10-14 16:04:44 +0100 (Thu, 14 Oct 2010) | 2 lines
 

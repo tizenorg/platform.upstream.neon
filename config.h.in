@@ -237,10 +237,10 @@
 /* Define to 1 if you have the `strtoq' function. */
 #undef HAVE_STRTOQ
 
-/* Define to 1 if `tm_gmtoff' is member of `struct tm'. */
+/* Define to 1 if `tm_gmtoff' is a member of `struct tm'. */
 #undef HAVE_STRUCT_TM_TM_GMTOFF
 
-/* Define to 1 if `__tm_gmtoff' is member of `struct tm'. */
+/* Define to 1 if `__tm_gmtoff' is a member of `struct tm'. */
 #undef HAVE_STRUCT_TM___TM_GMTOFF
 
 /* Define to 1 if you have the <sys/limits.h> header file. */
@@ -369,6 +369,9 @@
 
 /* Define to the one symbol short name of this package. */
 #undef PACKAGE_TARNAME
+
+/* Define to the home page for this package. */
+#undef PACKAGE_URL
 
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION
