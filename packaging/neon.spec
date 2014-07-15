@@ -41,6 +41,7 @@ rm -f aclocal.m4 ltmain.sh
 sh autogen.sh
 %configure \
     --with-ssl=gnutls \
+    --with-ca-bundle=/etc/ssl/ca-bundle.pem \
     --enable-threadsafe-ssl=posix \
     --with-expat \
     --disable-nls \
